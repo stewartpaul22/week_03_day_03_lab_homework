@@ -45,10 +45,9 @@ class Artist
 
   def self.find(id)
     sql = "SELECT * FROM artists WHERE id = #{id}"
-    # values = [id]
     results = SqlRunner.run(sql)
-    artists_hash = results.first
-    artist = Artist.new(artists_hash)
+    artist_hash = results.first
+    artist = Artist.new(artist_hash)
     return artist
   end
 
