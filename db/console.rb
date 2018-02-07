@@ -24,5 +24,8 @@ artist1.edit()
 album5.title = 'FDASFAEAGAADSAFS'
 album5.edit()
 
+album4.delete()
+album5.delete()
+
 binding.pry
 nil
