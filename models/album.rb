@@ -34,4 +34,10 @@ class Album
     return result
   end
 
+  # Edit Albums
+
+  # Delete Albums
+
+  # Find Albums by their ID
+
 end

@@ -25,10 +25,20 @@ class Artist
   end
 
   def albums()
-    sql = "SELECT * FROM albums where artist_id=$1"
+    sql = "SELECT * FROM albums WHERE artist_id=$1"
     values = [@id]
     albums = SqlRunner.run(sql, values)
     return albums.map{|album| Album.new(album)}
   end
+
+  def edit()
+    sql = "UPDATE artists SET (name) = ROW($1) WHERE id=$2"
+    values = [@name, @id]
+    result = SqlRunner.run(sql, values)
+  end
+  # Delete Artists
+
+  # Find Artists by their ID
+
 
 end

@@ -18,5 +18,8 @@ album3.save()
 album4.save()
 album5.save()
 
+artist1.name = 'White Sabbath'
+artist1.edit()
+
 binding.pry
 nil
