@@ -24,15 +24,11 @@ class Artist
     return artists.map{|artist| Artist.new(artist)}
   end
 
-  # List all the albums they have by an artist
   def albums()
     sql = "SELECT * FROM albums where artist_id=$1"
     values = [@id]
     albums = SqlRunner.run(sql, values)
     return albums.map{|album| Album.new(album)}
   end
-
-  # Show the artist any album belongs to
-
 
 end

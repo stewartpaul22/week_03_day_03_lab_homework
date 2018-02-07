@@ -26,9 +26,12 @@ class Album
     return albums.map{|album| Album.new(album)}
   end
 
-  # List all the albums they have by an artist
-
-  # Show the artist any album belongs to
-
+  def artist()
+    sql = "SELECT * FROM artists WHERE id=$1"
+    values = [@artist_id]
+    artists = SqlRunner.run(sql, values)
+    result = Artist.new(artists[0])
+    return result
+  end
 
 end
