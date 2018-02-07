@@ -1,5 +1,6 @@
 require("pry")
 require("pg")
+require_relative('../db/sql_runner.rb')
 
 class Artist
 
@@ -11,7 +12,6 @@ class Artist
     @name = options['name']
   end
 
-  # Create and Save Artists
   def save()
     sql = "INSERT INTO artists (name) VALUES ($1) RETURNING *"
     values = [@name]
