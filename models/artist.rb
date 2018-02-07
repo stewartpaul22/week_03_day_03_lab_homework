@@ -18,7 +18,6 @@ class Artist
     @id = SqlRunner.run(sql, values)[0]['id'].to_i
   end
 
-  # Create and Save Albums
 
   # List All Artists/Albums
 
