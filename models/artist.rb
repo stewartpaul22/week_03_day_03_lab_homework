@@ -36,7 +36,12 @@ class Artist
     values = [@name, @id]
     result = SqlRunner.run(sql, values)
   end
-  # Delete Artists
+
+  def delete()
+    sql = "DELETE FROM artists WHERE id=$1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 
   # Find Artists by their ID
 

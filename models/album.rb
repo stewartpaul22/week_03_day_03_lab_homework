@@ -40,7 +40,7 @@ class Album
     result = SqlRunner.run(sql, values)
   end
 
-  # Delete Albums
+  
 
   # Find Albums by their ID
 
