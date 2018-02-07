@@ -21,5 +21,8 @@ album5.save()
 artist1.name = 'White Sabbath'
 artist1.edit()
 
+album5.title = 'FDASFAEAGAADSAFS'
+album5.edit()
+
 binding.pry
 nil
