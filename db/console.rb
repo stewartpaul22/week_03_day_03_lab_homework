@@ -18,14 +18,14 @@ album3.save()
 album4.save()
 album5.save()
 
-artist1.name = 'White Sabbath'
-artist1.edit()
-
-album5.title = 'FDASFAEAGAADSAFS'
-album5.edit()
-
-album4.delete()
-album5.delete()
+# artist1.name = 'White Sabbath'
+# artist1.edit()
+#
+# album5.title = 'FDASFAEAGAADSAFS'
+# album5.edit()
+#
+# album4.delete()
+# album5.delete()
 
 binding.pry
 nil
