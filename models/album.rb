@@ -1,5 +1,5 @@
-require("pry")
-require("pg")
+require('pry')
+require('pg')
 require_relative('../db/sql_runner.rb')
 
 class Album

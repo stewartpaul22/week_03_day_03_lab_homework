@@ -1,5 +1,5 @@
-require("pry")
-require("pg")
+require('pry')
+require('pg')
 require_relative('../db/sql_runner.rb')
 
 class Artist
@@ -18,8 +18,11 @@ class Artist
     @id = SqlRunner.run(sql, values)[0]['id'].to_i
   end
 
-
-  # List All Artists/Albums
+  def self.all()
+    sql = "SELECT * FROM artists"
+    artists = SqlRunner.run(sql)
+    return artists.map{|artist| Artist.new(artist)}
+  end
 
   # List all the albums they have by an artist
 
